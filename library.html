@@ -11,10 +11,30 @@
 <body id="body">
 
 
-<!--Notes: Library display start. -->
-	<header class="header-library">
-
-        <a-scene>
+<!--Notes: Library HTML Application x-tag Display x-header. -->
+	<x-header class="header-library" data-json="
+        id: 'header',
+        meta:
+            {
+            
+            }
+        content: '#aframeLogo()',
+        attribute: 
+           {
+           components:[
+                {
+                name: '',
+                type: 'html/json'
+                getter: [ { } ],
+                setter: [ { } ],
+                ev: [
+                    {
+                    shareEvent: '',
+                    type: 'change'
+                    } ] 
+            } ]">
+ 
+        <a-scene id="aframeLogo">
     
             <a-sphere position="0 1.25 -1" radius="1.25" color="#EF2D5E"></a-sphere>
     
@@ -23,9 +43,9 @@
     
         </a-scene>
 
-	</header>
+	</x-header>
 
-<!-- Notes: Library HTML Application x-tag Display x-entity. -->
+<!-- Notes: Library HTML Application x-tag Display x-display. -->
 	<x-display data-json="
     {
     id: 'canvas-display',
