@@ -1,0 +1,36 @@
+// JSON Document
+
+[{
+"library":
+	{
+	"id": "Mozilla-Thimbles",
+	"active": true,
+	"compat": "iframe",
+	"shelf": 
+		[{
+		"title": "Lesson Plan || Aside Template",
+		"url": "https://thimbleprojects.org/kipomaha/68302/"
+		}]
+	},
+	{
+	"id": "Github-Repos",
+	"active": false,
+	"host": "",
+	"shelf": 
+		[{
+		"title": " ",
+		"id": " "
+		}]
+	},
+	{
+	"id": "Mozilla-Omaha-Docs",
+	"active": false,
+	"host": "http://www.mozillaomaha.org/",
+	"shelf": 
+		[{
+		"title": "HTML-JSON",
+		"id": "docs/HTML-JSON#"
+		}]
+	}
+}]
+			 

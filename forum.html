@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/makerstrap/makerstrap.complete.min.css">
+        <link rel="stylesheet" href="https://mozilla.github.io/webmaker-curriculum//stylesheets/styles.css" media="screen">
+        <link rel="stylesheet" href="css/mozOmaha-forum.css" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <title>Mozilla Omaha Forum</title>
+    </head>
+    <body>
+    
+    
+<!-- Notes: Header container -->
+
+
+        <header class="header-forum">
+        
+           <h1 class="title-forum">Mozilla Omaha's Forum</h1>
+           <nav class="inline forum-nav">
+              <a class="img-link" href="mozOmaha.html">
+                <img alt="Mozilla Omaha" src="img/logos/Mozilla-Omaha-Club.png" class="logo">
+              </a>
+              <a href="https://mozillaomaha.wordpress.com/" class="header-link">Moz Omaha Blog</a> |
+              <a href="downloads.html" class="header-link">Applications</a> |
+              <a href="library.html" class="header-link">Library</a> |
+              <a href="forum.html" class="header-link">Forum</a>
+           </nav>
+        </header>
+
+
+       <!-- Notes: BC Module -->
+
+		{module_whosloggedin}
+        {module_Forum,a}
+
+        <!-- Notes: Footer container -->
+
+
+          <footer class="footer">
+            <p class="text">
+  Web page maintained by Mozilla Omaha Club
+            </p>
+            <div class="license">
+              <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">
+				<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png">
+			  </a>
+            </div>
+          </footer>
+          <block id="forum-json" 
+             data-json="{
+             id:'forum-json'
+             class:'memory'
+             name:'json-memory'
+             businessCatalyst: null
+             }">
+				{{this|json}}
+          </block> 
+    </body>
+    <script type="text/javascript" src="js/djBase_Forums.js">
+    </script>
+    <script type="text/javascript">
+"use strict";
+var forumJSON = update(true,true),
+	businessCatalystJSON = JSON.parse(_('forum-json').innerHTML);
+
+	JSON.document.getJsonById("forum-json").businessCatalyst = businessCatalystJSON;
+	
+	console.log(JSON.document);
+
+	</script>
+</html>       

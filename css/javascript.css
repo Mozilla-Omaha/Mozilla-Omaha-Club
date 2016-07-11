@@ -1,0 +1,338 @@
+/*  -kipOmaha Styles  */
+.header{
+	text-align:center;
+}
+
+.footer{
+	position:relative; top:10mm; 
+	text-align:center;
+}
+
+/* Text styles */
+
+
+b.title{
+	font-family:Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;
+	font-weight:normal; color:rgba(45,45,45,1); font-size:15px; letter-spacing:1px;
+}
+
+legend.title-menu{
+	font-family:Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;
+	font-weight:normal; font-size:15px; color:rgba(45,45,45,1); letter-spacing:1px;
+	padding:0mm 5mm 0mm 5mm;
+	background-color:rgba(0,200,255,1);
+	border-radius:5mm;
+}
+
+
+/* Application Styles */
+
+
+.application-html{
+	position:relative; margin:0mm; left:0mm; top:10mm; width:100%; padding:5mm; height:70%;
+	background-color:rgba(0,125,255,1); 
+	overflow-X:hidden; overflow-Y:hidden;
+}
+
+.application-menu{
+	position:relative; top:0mm; left:7mm; width:90%;
+	background-color:rgba(255,255,255,1);
+}
+
+.application-utility{
+	position:relative; left:10mm; top:2mm;
+}
+
+.application-display{
+	position:relative; width:90%; height:85%;
+	overflow-X:none; overflow-Y:scroll;
+}
+
+.application-target{
+	position:relative; width:93%; height:80%; padding:5mm;
+	background-color:white;
+	overflow-X:none; overflow-Y:scroll;
+}
+
+.enlargeSnippetDesc{
+	position:absolute; top:5mm; left:65%;
+	font-family:Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+	font-size:14px; font-weight:700;
+	color:rgba(30,30,30,1);
+	border:rbga(25,25,255,1) ridge 3mm;
+	background-color:rgba(225,255,225,1);
+}
+
+.enlargeSnippetDesc:hover{
+	font-size:16px;
+	color:rgba(255,30,30,1);
+	background-color:rgba(225,225,255,1);
+}
+
+.application-menu-close{
+	font-family:Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+	font-size:14px; font-weight:700;
+	color:rgba(230,230,230,1);
+	border:rbga(85,85,85,1) outset 3mm;
+	background-color:rgba(255,10,10,1);
+}
+
+.application-menu-close:hover{
+	font-size:15px; color:rgba(255,0,0,1);
+	background-color:rgba(255,175,175,1);
+	border-style:groove;
+}
+
+.application-active-menu{
+	position:absolute; left:0mm; top:60mm; width:77%; height:60%; margin:60px; padding:30px;
+	background:rgba(0,255,100,1); border:rgba(0,255,150,1) outset 2px;
+}
+
+input.application-utility-menu{
+	font-family:Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+	font-size:14px; font-weight:700;
+	color:rgba(30,30,30,1);
+	border:rbga(25,25,255,1) ridge 3mm;
+	background-color:rgba(200,255,200,1);
+}
+
+input.application-utility-menu:hover{
+	color:rgba(255,0,0,1);
+	border-style:groove;
+}
+
+input.application-form-execute{
+	font-family:Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+	font-size:14px; font-weight:700;
+	color:rgba(30,30,30,1);
+	border:rbga(25,25,255,1) outset 3mm;
+	background-color:rgba(155,255,155,1);
+}
+
+input.application-form-execute:hover{
+	font-size:15px;
+	border-style:groove;
+	color:rgba(255,0,0,1);
+}
+
+textarea.application-user-code{
+	font-family:Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+	font-size:15px; font-weight:normal;
+	color:rgba(30,30,30,1);
+}
+
+input.application-utility-main-menu{
+	font-family:Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+	font-size:14px; font-weight:700;
+	color:rgba(30,30,30,1);
+	border:rbga(155,155,255,1) ridge 3mm;
+	background-color:rgba(150,150,255,1)
+}
+
+input.application-utility-main-menu:hover{
+	border-style:groove;
+	background-color:rgba(220,220,255,1);
+	color:rgba(100,200,100,1);
+}
+
+div.application-utility-main-menu{
+	margin:0mm; padding:1mm;
+	background-color:rgba(180,180,180,1);
+	border:rgba(145,145,145,1) outset 1mm;
+}
+
+.application-link{
+	padding:1mm;
+	font-family:arial;
+	font-size:13px; text-align:center;
+	font-weight:bold; 
+	text-decoration:none;
+	color:rgba(85,85,85,1);
+	background-color:rgba(255,255,255,1);
+}
+
+.application-label{
+	margin:1mm;	
+	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	font-weight:normal; color:rgba(45,45,45,1); font-size:15px; letter-spacing:1px;
+}
+
+.application-link:hover{
+	top:-1mm;
+	color:rgba(255,0,0,1);
+}
+
+.application-utility-execute{
+	font-family:Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+	font-size:14px; font-weight:700;
+	color:rgba(30,30,30,1);
+	border:rbga(155,155,255,1) ridge 3mm;
+	background-color:rgba(185,185,255,1)
+}
+
+.application-utility-execute:hover{
+	color:rgba(205,105,105,1);
+	border-style:groove;
+}
+
+.snippet-value{
+	width:80%; height:250px;
+}
+
+#jsLabTextConsole{
+	position:relative; top:0mm; margin: 3mm;
+	width:80%; height:55mm;
+	resize:both;
+}
+
+#htmlLabTextConsole{
+	position:relative; top:0mm; margin: 3mm;
+	width:80%; height:55mm;
+	resize:both;
+}
+
+#jsLabHelpBtn{
+	position:fixed; top:13mm; left:-13mm; width:30mm;
+	-ms-transform:rotate(270deg);
+	-webkit-transform:rotate(270deg);
+	transform:rotate(270deg);
+	background-color:rgba(185,185,255,1); text-align:center;
+	border:rbga(155,155,255,1) outset 3mm;
+	font-weight:bold;padding:1mm;
+	z-index:22;
+}
+
+#jsLabHelpBtn:hover{
+	color:rgba(205,105,105,1);
+	border-style:groove;
+}
+
+#kipMemberAccess{
+	position:absolute; top:0mm; left:80%; width:40mm; height:3.75mm; 
+	border-radius:0px 0px 15px 15px;
+}
+
+#executeJS{
+	position:absolute; left:83%; top:50mm; width:30mm; height:30mm;
+	border-radius:15mm;
+}
+
+#executeNewWindowJS{
+	position:absolute; left:84%; top:81mm; width:60mm; height:30mm;
+	border-radius:15mm;
+}
+
+#previewInsert{
+	position:absolute; top:5mm; left:60mm; 
+}
+
+#previewInsert section{
+	position:relative; width:90mm; height:20mm; margin:3mm; padding:2mm;
+	background-color:white;border:rgba(75,175,75,1) inset 2px;
+}
+
+.outputValue{
+	width:60mm; height:10mm;
+}
+
+#fileTool{
+	position:absolute; top:0mm; left:10mm; width:90%;
+}
+
+
+/* Snippet Execution Document Sytles */
+
+
+#_exeDocUtilities{
+	position:absolute; top:-50px; left:0px; width:100%; height:10%;
+	background-color:rgba(0,0,255,.5); opacity:.3;
+	overflow:visible;
+}
+#_exeDocUtilities:hover{
+	top:0px;
+	opacity:1;
+}
+#_exeDocUtilities button:hover{
+	border-style:inset; background-color:rgba(200,200,255,1);
+	color:tan; font-weight:bold;
+}
+#close_Document_App{
+	position:absolute;top:3px;left:90%;width:6em;height:6em;
+	border-radius:5px;color:rgba(100,100,100,1);font-weight:bold;
+}
+
+#new_Window_Document_App{
+	position:absolute;top:3px;left:83%;width:6em;height:6em;
+	border-radius:5px;color:rgba(100,100,100,1);font-weight:bold;
+}
+
+
+/* Save Menu Sytles */
+
+.save_snippet_menu{
+	position:fixed; margin-left:8mm; margin-top:8mm; padding:.5mm; width:92%; height:80%;
+	background-color:rgba(200,200,255,1); border:rgba(200,200,200,1) outset 2mm;
+	overflow-Y:scroll; overflow-X:hidden;
+}
+
+.save_snippet_menu textarea{
+	width:80%; height:20mm;
+}
+
+fieldset.application-fieldset{
+	margin:2mm;
+	background-color:rgba(100,255,100,1);
+}
+
+.save_snippet_menu input{
+	margin:2mm;
+}
+
+.application-utility-add-input{
+	font-family:Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+	font-size:14px; font-weight:700;
+	color:rgba(30,30,30,1);
+	border:rbga(155,155,255,1) ridge 3mm;
+	background-color:rgba(185,185,255,1);
+}
+
+.application-utility-add-input:hover{
+	background-color:rgba(100,100,255,1);	
+	font-size:16px; color:rgba(0,0,0,1);
+}
+
+
+/* Edit Menu Sytles */
+
+
+.edit_snippet_menu{
+	position:fixed; margin-left:8mm;  margin-top:8mm; padding:.5mm; width:92%; height:80%;
+	background-color:rgba(200,200,255,1); border:rgba(200,200,200,1) outset 2mm;
+	overflow-Y:scroll; overflow-X:hidden;
+}
+
+.edit_snippet_menu textarea{
+	width:80%; height:20mm;
+}
+
+fieldset.application-fieldset{
+	margin:2mm;
+	background-color:rgba(100,255,100,1);
+}
+
+.edit_snippet_menu input{
+	margin:2mm;
+}
+
+.edit_snippet_menu button{
+	margin:2mm;
+}
+
+
+/* Styles for the memory class */
+
+
+.memory{
+	position:absolute; top:0mm; left:0mm; width:0mm; height:0mm;
+	overflow:hidden;visibility:hidden;
+}

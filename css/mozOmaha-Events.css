@@ -1,0 +1,91 @@
+/* Stylesheet */
+
+	/* Notes:  override styles.css */
+input,select{
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	font-size: 1.05em;
+	padding: 1mm;
+	padding-left: 3mm;
+	padding-right: 3mm;
+	border-radius: 1.5mm;
+	border: none;
+	border-bottom: rgba(170,170,170,1) 2px solid;
+	background: rgba(255,255,255,1);
+	vertical-align: middle;
+}
+textarea{
+	background: rgba(255,255,255,1);
+}
+	/* Notes:  calender class styles */
+
+
+@keyframes shiftHeight{
+	0%{ top:-10mm; left:-10mm; width: 0%; height: 0%; }
+	100%{
+		top: 0%;
+		left: 51%; 
+		width: 48%;
+		height: 55%;
+	}
+}
+.calender{
+	position: fixed;
+	overflow: auto;
+    height: 2%;
+	background-color: white;
+	animation-name: shiftHeight;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+label.block{
+	background: rgba(255,255,255,1);
+	height: auto;
+	padding: 2mm;
+}
+strong.inline-block{
+	position:relative;
+	display:inline-block;
+	text-align: right;
+    padding-right: 2mm;
+	width: 80mm;
+	background: rgba(100,100,255,1);
+}
+.month-selector{
+	position: relative;
+	left: 2mm;
+	width: 40mm;
+}
+.day-selector{
+	position: relative;
+	left: 4mm;
+	width: 20mm;
+}
+.year-selector{
+	position: relative;
+	left: 4mm;
+	width: 25mm;
+}
+.title-selector{
+	position:relative;
+	left: 2mm;
+}
+.time-selector{
+	position: relative;
+	left: 2mm;	
+}
+.description-selector{
+	position: relative;
+	left: 2mm;
+	width: 100mm;
+	height: 25mm;
+}
+.file-selector{
+	position: relative;
+	margin-top:5mm;
+	margin-left: 2mm;
+	width: 70mm;
+	height: 9mm;
+	display: inline;
+}
+
+

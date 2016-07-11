@@ -1,0 +1,199 @@
+<html>
+<head>
+	<title>Mozilla Omaha Library</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+	<link rel="stylesheet" href="css/styles.css" />
+	<link rel="stylesheet" href="css/mozOmaha-library.css" />
+	<script type="text/javascript" src="js/node_modules/aframe/dist/aframe.min.js"></script>
+</head>
+
+<body id="body">
+
+
+<!--Notes: Library display start. -->
+	<header class="header-library">
+
+        <a-scene>
+    
+            <a-sphere position="0 1.25 -1" radius="1.25" color="#EF2D5E"></a-sphere>
+    
+            <a-camera position="1 1 6"> </a-camera>
+            <a-light position="1 0 0"> </a-light>
+    
+        </a-scene>
+
+	</header>
+
+<!-- Notes: Library HTML Application x-tag Display x-entity. -->
+	<x-display data-json="
+    {
+    id: 'canvas-display',
+    current: '#start-screen',
+    content: 
+        [ { parent: 'x-display',
+            children: 'auto'
+           } ]
+    }">
+    </x-display>
+    
+<!-- Notes: Library HTML Application x-tag Application Module x-entity. -->
+	<x-application id="html-application" data-json="
+    {
+    id: 'html-application',
+     meta: 
+        {
+        title: 'Mozilla Omaha Library',
+        root: 'www.mozillaomaha.org',
+        },
+    lifecycle:
+        {
+        created: [ { } ],
+        inserted: [ { } ]
+        },
+    content: 'auto',
+    attribute:
+        {
+        components:[
+            {
+            name: 'data-application',
+            type: 'html/json'
+            getter: [ { } ],
+            setter: [ { } ],
+            ev: [
+                {
+                shareEvent: '',
+                type: 'change'
+                }
+                }
+            }
+            ],
+        getter: [ { } ],
+        setter: [ { } ]
+        }
+	}">
+
+
+<!-- Notes: Library HTML Application x-tag DOM memory x-entity. -->
+		<x-memory class="pallete" data-json="{
+            id: 'application-pallete'
+            content: 'auto'
+            schema: 
+                {
+                required: true,
+                type: 'application'
+                }
+        }">
+ 
+	<!-- Notes: Library HTML Application x-tag form x-book -->	  
+			<x-book class="chapter" data-json="
+                {
+                id: 'book-schema',
+                content: 'auto'
+                schema: 
+                    {
+                    
+                    }
+                }">
+				<h3 class="title"></h3>
+				<section class="title-page">
+					<section class="title-section">
+						<h3 class="title inline">Title: </h3> 
+						<p class="inline title-item">Lesson Plan Thimble</p>
+					</section>
+					<section class="description-section">
+						<h3 class="title">Descritpion:</h3>
+						<p class="text description-item">A simple to remix lesson plan template that comes with css and javascipt.</p>
+					</section>
+					<section class="author-section">
+						<p class="author">Author: Kip</p>
+					</section>
+				</section>
+			</x-book> 
+
+	<!-- Notes: Library HTML Application x-tag form x-entity -->
+            <x-kiosk data-json="">
+                <h3 class="title">Library Menu</h3>
+                <button id="openReader" onclick="reader._open('reader-container','reader-viewer','reader-controls');this.getElementsByTagName('h4')[0].innerHTML==='Open Reader'?this.getElementsByTagName('h4')[0].innerHTML='Close Reader':this.getElementsByTagName('h4')[0].innerHTML='Open Reader';"><h4 class="title">Open Reader</h4></button>
+                <button><h4 class="title">Donate Library eBook</h4></button><br />
+                { module_whosloggedin }
+            </x-kiosk>
+
+	<!-- Notes: Library HTML Application x-tag form x-entity -->
+			<x-form name="form-applications" id="form-applications"
+                data-json="
+                {
+                id: 'form-applications',
+                root: 'x-form',
+                children: [
+                    { parent: '#reader-tool-pad',
+                      children: 'auto' }
+                ]
+                }">
+				<form id="reader-tool-pad">
+					<input type="button" value="Previous">
+					<input type="button" value="Next">
+					<input type="button" value="Enlarge Reader">
+					<input onclick="" type="button" value="Close">
+					<fieldset class="reader-pages" name="reader-pages">  
+						<legend>Book</legend>
+						<input type="number" value="1" step="1" min="1"> 
+						<strong class="label">of</strong>
+						<strong id="reader-pages">#</strong>
+					</fieldset>
+				</form>
+			</x-form>
+
+	<!-- Notes: Library HTML Application x-tag form x-canvas -->
+			<x-canvas id="library-room" class="library"
+                data-json="
+                {
+                    id: 'library-room',
+                    content: 'library()
+                            [(
+                                floor(
+                                    styles =
+                                        (
+                                        @floor-perimeter| p-start(0px,0px) p-line(500px,0px) p-line(500px,500px) p-line(0px,500px);
+                                        @floor-layout| ;
+                                        @floor-width| 70%;
+                                        @floor-pattern| url(library_Floor_Pattern|#);
+                                        )
+                                )[
+                                    shelves()[
+                                        books()
+                                        ],
+                                    tables()[
+                                        seats()
+                                        ]
+                                    ]
+                                ],
+                                wall(),
+                                ceiling(),
+                                entrance()[
+                                    banner()[
+                                        anchor()[
+                                            image()
+                                        ]
+                                    navmap()
+                                    login()
+                                    help()
+                                    ]
+                                ]
+                            )]'
+                }">
+			</x-canvas>
+
+		</x-memory>
+
+	</x-application>
+
+<script type="text/javascript" src="js/node_modules/x-tag/dist/x-tag-core.js"></script>
+<script type="text/javascript">
+var custom_application = base.update( [ [ "x-application", { } ], [ "x-memory" , { } ], [ "x-form", { } ] ] );
+
+</script>
+
+</body>
+
+</html>

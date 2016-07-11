@@ -1,0 +1,101 @@
+/* Stylesheet */
+
+
+/* Notes: Item Styles */
+
+	/* Notes: Thimble Item Styles */
+.thimble-item{
+	border: rgba(125,125,125,1) 1px solid;
+	background: rgba(255,255,255,.85);
+}
+
+	/* Notes: Repo Item Styles */
+.repo-item{
+	border: rgba(125,125,125,1) 1px solid;
+	background: rgba(255,255,255,.85);
+}
+
+
+	/* Notes: Documentation Item Styles */
+.documentation-item{
+	border: rgba(125,125,125,1) 1px solid;
+	background: rgba(255,255,255,.85);
+}
+
+.title-item{
+	font-size: 2.125em;
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+.description-item{
+	font-family: segoe;
+	font-size: 16px;
+	display: inline-block;
+	margin-left: 5mm;
+	padding: 2mm;
+	padding-left: 5mm;
+	width: 80%;
+	border-radius: 5mm 5mm 0mm 0mm;
+	background-color: rgba(225,25,25,1);
+	color: rgba(255,255,255,1);
+}
+
+	/* Notes: Reader Styles */
+@keyframes curtain-fadeIn{
+	0%{}
+	100%{
+		top: 0%;
+	}
+}
+.reader-container{
+	animation-name: curtain-fadeIn;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	position: fixed;
+	top: -24%;
+	left: 50%;
+	width: 50%;
+	height: 25%;
+	border: rgba(65,236,35,1) 3px inset;
+	background: rgba(255,255,255,1);
+	overflow: auto;
+}
+@keyframes shiftHeight{
+	0%{top:-1%;}
+	100%{
+		top: 0%;
+		height: 55%;
+	}
+}
+.reader-container:hover{
+	animation-name: shiftHeight;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+	/* Notes: New Book Form Styles */
+#add-new-book-form{
+	background:rgba(255,255,255,1);
+	width: 65%;
+	height: auto;
+	padding: 1mm;
+	margin-top: .25mm;
+	margin-bottom: 1mm;
+	border: rgba(0,0,0,.5) 1mm inset;
+}
+.book-upload{
+	padding: 5mm;
+	margin-left: 6mm;
+	margin: 3mm;
+	background: rgba(215,233,215,1);
+	border: rgba(85,133,85,1) 2px groove;
+}
+
+
+/* Aframe styles */
+a-scene{
+	position:fixed;
+	width: 100%;
+	height: 100mm;
+}

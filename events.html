@@ -1,0 +1,234 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1">
+        <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/makerstrap/makerstrap.complete.min.css">
+        <link rel="stylesheet" href="https://mozilla.github.io/webmaker-curriculum//stylesheets/styles.css" media="screen">
+        <link rel="stylesheet" href="https://mozilla.github.io/webmaker-curriculum//stylesheets/print.css" media="print">
+        <link rel="stylesheet" href="css/styles.css"/>
+        <link rel="stylesheet" href="css/mozOmaha-Events.css"/>
+        <script src="js/djBase_Beta.js"></script>
+		<title>Mozilla Omaha Events</title>
+	</head>
+	<body>
+    	<header>
+            <a class="img-link" href="#">
+                <img alt="Mozilla Omaha" src="img/logos/Mozilla-Omaha-Club.png">
+            </a>
+        	<h1 class="title">Mozilla Omaha Events</h1>
+            <nav class="nav">
+				<h4 class="title">Mozilla Omaha Links</h4>
+				<a class="header-link" href="https://mozillaomaha.wordpress.com/">Moz Omaha Blog</a> |
+				<a class="header-link" href="downloads.html">Applications</a> |
+				<a class="header-link" href="library.html">Library</a> |
+				<a class="header-link" href="forum.html">Forum</a> |  
+   				<a class="header-link" href="events.html">Events</a>
+            </nav>
+
+            <form id="calender" class="calender">
+				<fieldset class="form-instructions">
+                	<legend><h4>Event Calender: Currently Under Construction</h4></legend>
+					<p class="text">
+	Use this calender tool to upload your own Web Literacy or Web Advocate Event or browse events that are currently going on in your area. 
+  These events are free of charge and hosted by Mozilla Clubs around the world. All events are either hosted online or are events that take place within 
+Mozilla Club Communities.
+            		</p>
+					<p class="text">
+Please, read the event descriptions and tell us what you think by following the "More information" link for each event. 
+            		</p> 
+                </fieldset>
+                <fieldset>
+                    <h3 class="title">Event Information</h3><hr>
+                    <label class="block">
+                        <strong class="inline-block">What is the title of our event? </strong>
+                        <input class="title-selector" name="" type="text" disabled>
+                    </label>
+                	<label class="block">
+                    	<strong class="inline-block">What is the start date of your event? </strong>
+                        <label name="month" disabled>
+                            <select class="month-selector">
+                                <option>January</option>
+                                <option>Febraury</option>
+                                <option>March</option>
+                                <option>April</option>
+                                <option>May</option>
+                                <option>June</option>
+                                <option>July</option>
+                                <option>August</option>
+                                <option>Semptember</option>
+                                <option>October</option>
+                                <option>November</option>
+                                <option>December</option>
+                            </select>
+                        </label>
+                        <label>
+                            <input class="day-selector" type="number" step="1" value="1" disabled>
+                            <b class="inline-block day-selector">, </b>
+                        </label>
+                        <label>
+                            <input class="year-selector" type="number" step="1" value="2016" disabled>
+                        </label>
+                     </label>
+
+					<label class="block">
+                    	<strong class="inline-block">What is the end date of your event?</strong>
+                        <label name="month" disabled>
+                            <select class="month-selector">
+                                <option>January</option>
+                                <option>Febraury</option>
+                                <option>March</option>
+                                <option>April</option>
+                                <option>May</option>
+                                <option>June</option>
+                                <option>July</option>
+                                <option>August</option>
+                                <option>Semptember</option>
+                                <option>October</option>
+                                <option>November</option>
+                                <option>December</option>
+                            </select>
+                        </label>
+                        <label>
+                            <input class="day-selector" type="number" step="1" value="1" disabled>
+                            <b class="inline-block day-selector">, </b>
+                        </label>
+                        <label>
+                            <input class="year-selector" type="number" step="1" value="2016" disabled>
+                        </label>
+                     </label>
+
+                    <label class="block">
+                        <strong class="inline-block">What is the start time of your event? </strong>
+                        <input class="time-selector" name="" type="text" disabled>
+                    </label>
+
+                    <label class="block">
+                        <strong class="inline-block">What is the end time of your event? </strong>
+                        <input class="time-selector" name="" type="text" disabled>
+                    </label>
+
+                    <label class="block">
+                        <strong class="inline-block">Do you want to upload an image? </strong>
+                        <input class="file-selector" name="" type="file" disabled>
+                    </label>
+
+                    <label class="block">
+                        <strong class="inline-block">What the is event url? </strong>
+                        <input class="time-selector" name="" type="text" disabled>
+                    </label>
+
+                    <label class="block">
+                        <strong class="inline-block">Do you need to sign up? </strong>
+                        <label>Yes<input class="yes-selector" name="signup" type="radio" dsisabled></label>
+                        <label>No<input class="no-selector" name="signup" type="radio" dsisabled></label>
+                    </label>
+
+                    <label class="block">
+                        <strong class="inline-block">Description: </strong>
+                        <textarea class="description-selector" name="" disabled></textarea>
+                    </label>
+                    <h3 class="title">Club Information</h3><hr>
+                    <label class="block">
+                        <strong class="inline-block">What is the name of your Mozilla Club?</strong>
+                        <input type="text" class="club-selector" disabled>
+                    </label>
+
+                </fieldset>
+				<noscript id="mozilla-omaha-calender-json">
+{
+	id: "mozilla-omaha-calender-json"
+    events: 
+    [{
+    	id: "title_of_your_event"
+        description: ""
+        event-location: 
+        {
+        url: "url/false"
+        city: "City Name"
+        state: "State Name"
+        country: "Country Name"
+        }
+        start-date: "##:##:## #.M."
+        end-date: "##:##:## #.M."
+        start-time: "##:##:## #.M."
+        end-time: "##:##:## #.M."
+    }]
+}
+                </noscript>
+			</form>
+		</header>
+
+		<main class="main">		
+        	<div id="calender" class="event-calender">
+			  <div class="event">
+				<h3>Annual Event</h3>
+			    <p class="event-title">Title: Mozilla Club Science Fair</p>
+			    <p class="event-description">
+  Description:<br> If individuals gather locally and network globally we can build ties that move across international lines.
+Science can be a social and educational event at the same time, after all science is a part of a callaborative process, and because of this
+we can use it as a catalyst to help us move ideas. Unfortunately, we can't hold this event without a lot of preperation so before we get started
+we need to know if you would be willing to contribute something to a Mozilla Club Science Show. To learn more about contributing please click the
+"More information" link below.
+  				</p>
+			    <p class="event-date">Date: TBA</p>
+                <p class="event-recurrence">Recurrence: TBA</p> 
+                <p class="event-start">Start: TBA</p>
+                <p class="event-end">End: TBA</p> 
+                <p class="event-location">Location: Online</p> 
+				<a href="#"><img class="sticker" src="img/mozilla-science-fair.png" alt="More information"></a>
+				</div>
+                    <div class="event">
+                    <h3>Annual Event</h3>
+                    <p class="event-title">Title: Mozilla Omaha's HTML Application Talk</p>
+                    <p class="event-description">Description:<br>
+      Mozilla Omaha's HTML Talk is a forum chat that discusses current HTML Application Development projects. We will try to cover applications that 
+    have a real impact on how we use the social aspect of the web. What we are looking to gain in these talks is a sense of inclusion and the spread of 
+    ideas. Our plan is to network with other Mozilla Clubs so that we can build towards inclusion and start spreading ideas. If you'd like to learn 
+    more about this event or make a contribution of some sort please follow the "More information" link below.
+                    </p>
+                    <p class="event-date">Date: TBA</p>
+                    <p class="event-recurrence">Recurrence: TBA</p> 
+                    <p class="event-start">Start: TBA</p>
+                    <p class="event-end">End: TBA</p> 
+                    <p class="event-location">Location: Online</p> 
+                    <a href="#"><img class="sticker" src="img/firefox-app-talk.png" alt="More information" class="link event"></a>
+                </div>
+    
+                <div class="event">
+                    <h3>Event Basis TBA</h3>
+                    <p class="event-title">Title: Mozilla Omaha's Maker Party</p>
+                    <p class="event-description">
+      Description:<br> A Maker Party is an event where we come together and talk about contemporary problems concerning the web. We use Maker Parties to 
+    connect with people, share information, and teach new skills. If you would like to get involoved with Maker Parties please click the "More information"
+    link below.
+                    </p>
+                    <p class="event-date">Date: TBA</p>
+                    <p class="event-recurrence">Recurrence: Monthly</p> 
+                    <p class="event-start">Start: TBA</p>
+                    <p class="event-end">End: TBA</p> 
+                    <p class="event-location">Location: Online</p> 
+                    <a href="#"><img class="sticker" src="img/maker-party.png" alt="More information"></a>
+                </div>
+			</div>
+		</main>
+
+		<footer class="footer">
+			<p class="text">
+  Web page maintained by Mozilla Omaha Club
+			</p>
+			<p class="text">
+  Special thanks to:&nbsp;&nbsp;<a href="http://kipomaha.org" target="new">Kip from Omaha</a>
+			</p>
+			<div class="license">
+				<a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">
+					<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png">
+				</a>
+			</div>
+		</footer>
+
+		<script type="text/javascript">
+
+		</script>
+	</body>
+</html>

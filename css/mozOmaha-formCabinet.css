@@ -1,0 +1,224 @@
+/**************************************
+	Notes: Animation key frames declared at top	
+	
+**************************************/
+@keyframes form-arm{
+	
+}
+
+body {
+	font-family: "Open Sans", sans-serif; 
+	letter-spacing: .05em;
+	line-height: 1.5em;
+	vertical-align: middle;
+}
+ol{
+	list-style:inside decimal;
+}
+h1,h2,h3,h4,h5{
+	font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;
+	letter-spacing: .2em;
+}
+iframe{
+	position: fixed;
+	width: 100%;
+	height: 20%;
+	top: 99.5%;
+	left: 0%;
+}
+cite{
+	display: inline-block;
+	font-size: .95em;
+	margin-top: 3mm;
+	margin-bottom: 3mm;
+}
+cite:before{
+	content:"Citation: ";
+	font-size: 16px;
+	font-weight: bold;
+}
+img{
+	margin: 1mm;
+	padding: 2mm;
+
+}
+input,textarea{
+	padding: 1mm;
+	border-radius: 1.5mm;
+}
+input:hover,textarea:hover{
+	border-color: skyblue;
+}
+.header{
+	position: absolute;
+	top: 0mm;
+	left: 0mm;
+}
+img.logo{
+	display: inline-block;
+	vertical-align: middle;
+}
+img.small-scale{
+	width: 20mm;
+}
+.footer{
+	position: absolute;
+	top: 100%;
+	left: 0%;
+	margin: 2mm;
+}
+.chapter{
+	margin: 1mm;
+	padding: 1mm;
+	padding-left: 10mm;
+}
+.title{
+	margin: 1mm;
+	color:rgba(45,45,45,1);
+	font-weight: bold;
+}
+.sub-chapter-title{
+	color:rgba(75,75,75,1);
+	padding: 2mm;
+	padding-left:15mm;
+}
+.event-title{
+	font-size: 16px;
+	color: rgba(75,75,75,1);
+}
+.inline{
+	display: inline-block;
+}
+.featured:before{
+	content: "Featured: ";
+	font-size: 18px;
+	color: rgba(175,25,25,1);
+}
+.description{
+	font-family: segoe;
+	font-size: 16px;
+	display: inline-block;
+	margin: 0%;
+	margin-bottom: 0%;
+	padding: 2mm;
+	padding-left: 5mm;
+	width: 80%;
+	border-radius: 5mm 5mm 0mm 0mm;
+	background-color: rgba(225,25,25,1);
+	color: rgba(255,255,255,1);
+}
+.caption{
+	font-family: segoe;
+	font-size: 16px;
+	display: inline-block;
+	padding: 2mm;
+	padding-left: 5mm;
+	margin: .5%;
+	width: 80%;
+	border-radius: 4mm;	
+	background-color: rgba(225,25,25,1);
+	color: rgba(255,255,255,1);
+}
+.container{
+	font-size:14px; 
+	font-family:arial, serif;
+	padding:2mm; 
+	margin:2mm;
+}
+.form-editor{
+	position:absolute; 
+	left: 47%;
+	top: 60mm;
+	width: 60%;
+	height: auto;
+	background: rgba(240,240,255,1);
+}
+.form-cabinet{
+	position:absolute; 
+	left: 0mm;
+	top: 60mm;
+	width: 45%;
+	height:auto;
+	background-color:rgba(200,200,255,1); 
+	padding:2mm; 
+	margin:2mm;
+}
+.form-drawer{
+	position: relative;
+	width: 60%;
+	display: block;
+}
+.side-panel{
+	width: 65%;
+	height: 8em;
+	border-radius: 1.5mm;
+}
+.side-panel:hover{
+	border-color: yellow;
+	left: 20px;
+}
+.form-arm{
+	width: 55%;
+	height: 8mm;
+	background: rgba(115,225,224,1.00);
+}
+.form-arm:hover{
+	animation-name:"";
+}
+.form-roller{
+	width: 10mm;
+	height: 10mm;
+	background: rgba(185,255,185,1);
+	border-radius: 15mm;	
+}
+.memory{
+	position:absolute; 
+	top:0mm; 
+	left:0mm; 
+	width:0mm; 
+	height:0mm; 
+	overflow:none; 
+	visibility:hidden;
+}
+table.forum{
+	background: white;
+	border: none;
+	border-radius: 3mm;
+	border-collapse:separate;
+	border-spacing: 1mm;
+}
+td.name{
+	background-color: white;
+	border:1px solid #eee;
+	border-radius: 3mm;
+}
+td.topics{
+	background-color: white;
+	border:1px solid #eee;
+	border-radius: 3mm;
+}
+td.posts{
+	background-color: white;
+	border:1px solid #eee;
+	border-radius: 3mm;
+}
+td.lastpost{
+	background-color: white;
+	border:1px solid #eee;
+	border-radius: 3mm;
+}
+ol.table-of-contents{
+	margin-left: 5mm;
+}
+
+/* 
+==============================
+Notes: Form Styles 
+==============================
+*/
+
+#recaptcha_widget_div{
+	position:relative; 
+	left:40%;
+}
+

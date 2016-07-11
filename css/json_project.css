@@ -1,0 +1,106 @@
+/*  -kipOmaha Styles  */
+
+#pageHeader{
+	position:relative; width:80%;margin:3mm;
+	text-align:center;
+}
+
+#pageFooter{
+	position:relative; margin:3mm; width:100%; 
+	text-align:center;
+}
+
+/* Inline JSON Education Application */
+
+
+#inlineJsonApplication{
+	position:relative;margin:3mm;left:5mm;width:80%;height:155mm;overflow-X:hidden;overflow-Y:hidden;
+}
+
+#appCurlyBraceStart{
+	font-family:Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;
+	font-wieght:0;
+	text-decoration:none;
+}
+
+#appCurlyBraceEnd{
+	font-family:Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;
+	font-wieght:0;
+	text-decoration:none;
+}
+
+
+/* Notes: JSON Project book stlyes */
+
+h1, h2, h3, h4, h5, h6{
+	font-family:Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;
+	text-decoration:underline;
+}
+
+code{
+	padding:2mm; margin:2mm;
+	background-color:rgba(155,155,175,1);
+	border:thin solid black;
+}
+
+#reference_application{
+	position:relative; left:5mm; margin:3mm; width:80%; 
+	overflow:hidden;
+}
+
+#project-status-title{
+	font-size:22;
+}
+
+#project-status{
+	font-size:18px;
+}
+
+.property{
+	color:rgba(0,0,0,.8);
+}
+
+.property-value{
+	color:rgba(255,10,10,1);
+}
+
+.book{
+	position:relative; padding:3mm; margin:3mm;
+	background-color:rgba(175,175,200,1);
+	font-family:arial; font-size:20px;
+	text-align:justify;
+}
+
+.book-title{
+	font-size:25px; font-weight:100;
+	color:rgba(0,0,75,.8);
+}
+
+.book-chapter{
+	padding:3mm; margin:3mm;
+	background-color:rgba(255,255,255,.8);
+	border:rgba(10,10,25,1) .5px solid;
+}
+
+.book-chapter-post{
+	padding:3mm; margin:3mm;
+	background-color:rgba(245,245,255,1);
+	border:rgba(200,200,200,1) 4px outset;
+}
+
+.book-chapter-post-title{
+	font-size:21px; font-weight:none;
+	color:rgba(0,0,75,1);
+}
+
+.book-link{
+	font-weight:bold; 
+	color:rgba(255,50,50,1);
+}
+
+.book-text-code{
+	display:inline-block;
+	font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	font-size:15px; font-weight:bold;
+}
+

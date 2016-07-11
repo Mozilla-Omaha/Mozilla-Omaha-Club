@@ -1,0 +1,66 @@
+/* ===================
+	Notes: Stylesheet
+=================== */
+
+table.forum{
+	background: white;
+	border: none;
+	border-radius: 3mm;
+	border-collapse:separate;
+	border-spacing: 1mm;
+}
+td.name{
+	background-color: white;
+	border:1px solid #eee;
+	border-radius: 3mm;
+}
+td.topics{
+	background-color: white;
+	border:1px solid #eee;
+	border-radius: 3mm;
+}
+td.posts{
+	background-color: white;
+	border:1px solid #eee;
+	border-radius: 3mm;
+}
+td.lastpost{
+	background-color: white;
+	border:1px solid #eee;
+	border-radius: 3mm;
+}
+.forum-nav{
+	width:160mm;
+	background: rgba(255,255,255,.5);
+}
+p.inline{
+	display: inline;
+}
+
+
+/* ====================
+	Notes: footer  
+==================== */
+
+.footer{
+	height: 50mm;
+}
+
+/* ====================
+	Notes: Styles for BC Genereated tags 
+==================== */
+
+#editorf{
+	position: fixed;
+	width: 60%;
+	height: 60%;
+	top: 20%;
+	left:20%;
+}
+#editorf:hover{
+}
+
+.user{
+	font-size: 1.2em;
+	width: 40mm;
+}
