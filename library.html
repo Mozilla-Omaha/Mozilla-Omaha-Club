@@ -1,38 +1,55 @@
 <html>
+    
+<!-- Notes: This a working draft. 
+
+        The xtags library has an object added to it named base.
+
+        Base adds more functionality to the xtags  library by adding the ability to read json off the DOM.
+        It also comes with built in registered xtag objects. For docs see our google note books.
+
+-->
 <head>
+
 	<title>Mozilla Omaha Library</title>
 	<meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1">
 	<link rel="stylesheet" href="css/styles.css" />
 	<link rel="stylesheet" href="css/mozOmaha-library.css" />
 	<script type="text/javascript" src="js/node_modules/aframe/dist/aframe.min.js"></script>
+    <script type="text/javascript" src="js/node_modules/x-tag/dist/x-tag-core.js"></script>
+
 </head>
 
 <body id="body">
 
-
 <!--Notes: Library HTML Application x-tag Display x-header. -->
-	<x-header class="header-library" data-json="
+	<x-header id="header" class="header-library" data-json="
+        {
         id: 'header',
         meta:
             {
-            
+            title: 'Mozilla Omaha Library',
+            root: 'www.mozillaomaha.org',
+            parent: 'x-header'
+            type: 'html/json'
             }
-        content: '#aframeLogo()',
+        content: 'aframe( #aframeLogo )',
         attribute: 
            {
-           components:[
-                {
-                name: '',
+           components:
+                [ {
+                position: [ 'skip', 0 0 0', '0 5 0', '0 0 0' ],
+                shareWith: [ 'a-light', 'a-camera', 'a-image' ],
                 type: 'html/json'
                 getter: [ { } ],
                 setter: [ { } ],
-                ev: [
-                    {
-                    shareEvent: '',
-                    type: 'change'
+                ev: 
+                    [ {
+                    click: [ 'http', 'www.mozillaomaha.org', 'parent' ]
                     } ] 
-            } ]">
+                } ]
+            }
+        }">
  
         <a-scene id="aframeLogo">
     
@@ -136,7 +153,7 @@
                 <h3 class="title">Library Menu</h3>
                 <button id="openReader" onclick="reader._open('reader-container','reader-viewer','reader-controls');this.getElementsByTagName('h4')[0].innerHTML==='Open Reader'?this.getElementsByTagName('h4')[0].innerHTML='Close Reader':this.getElementsByTagName('h4')[0].innerHTML='Open Reader';"><h4 class="title">Open Reader</h4></button>
                 <button><h4 class="title">Donate Library eBook</h4></button><br />
-                { module_whosloggedin }
+
             </x-kiosk>
 
 	<!-- Notes: Library HTML Application x-tag form x-entity -->
@@ -207,10 +224,10 @@
 		</x-memory>
 
 	</x-application>
-
-<script type="text/javascript" src="js/node_modules/x-tag/dist/x-tag-core.js"></script>
 <script type="text/javascript">
 var custom_application = base.update( [ [ "x-application", { } ], [ "x-memory" , { } ], [ "x-form", { } ] ] );
+
+    custom_application;
 
 </script>
 
