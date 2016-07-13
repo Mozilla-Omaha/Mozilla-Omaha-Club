@@ -8,14 +8,61 @@
         It also comes with built in registered xtag objects. For docs see our google note books.
 
 -->
+
+<!-- Notes: Schema Documentation
+
+        data-json=
+        "{
+        id: 'string',
+        current: 'string key word',
+        meta:
+            {
+            title: 'string',
+            root: 'string url',
+            type: 'string keyword'
+            }
+        content: 'string keyword syntax',
+        lifecycle: 
+            {
+            preload: [ ' ' ],
+            onstart: [ ' ' ],
+            onexit: [ ' ' ],
+            checkCurrentStatus: [ ' ' ]
+            },
+        events:
+            {
+            toggle: [ ' ' ],
+            menu: [ ' ' ],
+            },
+        attribute: 
+           {
+           components:
+                [ {
+                position: array,
+                shareWith: array,
+                type: 'string key word'
+                getter: [ { } ],
+                setter: [ { } ],
+                events: 
+                    [ {
+                    http: [ 'www.mozillaomaha.org', 'parent' ]
+                    } ] 
+                } ]
+            }
+        }"
+
+-->
 <head>
 
 	<title>Mozilla Omaha Library</title>
+
 	<meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1">
+
 	<link rel="stylesheet" href="css/styles.css" />
 	<link rel="stylesheet" href="css/mozOmaha-library.css" />
-	<script type="text/javascript" src="js/node_modules/aframe/dist/aframe.min.js"></script>
+
+	<script type="text/javascript" src="js/node_modules/aframe/dist/aframe-v0.2.0.js"></script>
     <script type="text/javascript" src="js/node_modules/x-tag/dist/x-tag-core.js"></script>
 
 </head>
@@ -25,15 +72,27 @@
 <!--Notes: Library HTML Application x-tag Display x-header. -->
 	<x-header id="header" class="header-library" data-json="
         {
-        id: 'header',
+        id: 'header',,
+        current: 'default',
         meta:
             {
             title: 'Mozilla Omaha Library',
             root: 'www.mozillaomaha.org',
-            parent: 'x-header'
             type: 'html/json'
             }
-        content: 'aframe( #aframeLogo )',
+        content: 'scene( #aframeLogo )',
+        lifecycle: 
+            {
+            preload: [ ' ' ],
+            onstart: [ ' ' ],
+            onexit: [ ' ' ],
+            checkCurrentStatus: [ ' ' ]
+            },
+        events:
+            {
+            toggle: [ ' ' ],
+            menu: [ ' ' ],
+            },
         attribute: 
            {
            components:
@@ -43,9 +102,9 @@
                 type: 'html/json'
                 getter: [ { } ],
                 setter: [ { } ],
-                ev: 
+                events: 
                     [ {
-                    click: [ 'http', 'www.mozillaomaha.org', 'parent' ]
+                    http: [ 'www.mozillaomaha.org', 'parent' ]
                     } ] 
                 } ]
             }
@@ -67,10 +126,29 @@
     {
     id: 'canvas-display',
     current: '#start-screen',
-    content: 
-        [ { parent: 'x-display',
-            children: 'auto'
-           } ]
+        meta:
+            {
+            title: 'Mozilla Omaha Library',
+            root: 'www.mozillaomaha.org',
+            parent: 'x-display'
+            type: 'html/json'
+            }
+    content: 'onStart( #aframeLogo )',
+    attribute: 
+        {
+        components:
+            [ {
+            position: [ 'skip', 0 0 0', '0 5 0', '0 0 0' ],
+            shareWith: [ 'a-light', 'a-camera', 'a-image' ],
+            type: 'html/json'
+            getter: [ { } ],
+            setter: [ { } ],
+            ev: 
+                [ {
+                click: [ 'http', 'www.mozillaomaha.org', 'parent' ]
+                } ] 
+            } ]
+        }
     }">
     </x-display>
     
@@ -225,9 +303,6 @@
 
 	</x-application>
 <script type="text/javascript">
-var custom_application = base.update( [ [ "x-application", { } ], [ "x-memory" , { } ], [ "x-form", { } ] ] );
-
-    custom_application;
 
 </script>
 
