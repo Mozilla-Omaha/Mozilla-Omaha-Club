@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<!--
+===========================================================
+	Company: Mozilla Omaha
+  Author: Steven Van Sant
+  Date: 4/21/2016
+	Contributors: Steven Van Sant
+===========================================================
+-->
+
+<!doctype html>
+	<html>
+
+	  <head>
+
+		    <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1">
+
+        <link rel="stylesheet" href="css/styles.css" media="screen">
+        <link rel="stylesheet" href="css/index-styles.css"/>
+
+        <!-- <script src="js/node_modules/aframe/dist/aframe-v0.2.0.js" async></script> -->
+
+        <title>Mozilla Omaha</title>
+
+      </head>
+
+	  <body>
+        
+        <x-aside class="drop-curtain" id='site-navigation' name="top-menu"
+          data-json="{
+          id: '#',
+          class: '.',
+          name: '_',
+          meta: 
+            {
+              title: 'Mozilla Club Omaha',
+              root: 'www.mozillaomaha.org'
+            },
+          content: 
+            {
+              current: '',
+              device: { type: 'laptop' }
+            },
+          lifecycle:
+            {
+              created: [ 'preload', { type: 'webvr', target: '' } ],
+              inserted: [ 'onstart', 'playSet(1)' ],
+              removed: [ 'message', 'prompt( Are you sure you want to close the Web VR player? )' ],
+              propertyChanged: [ 'content', 'display()' ]
+            },
+          events:
+            {
+              carousel : { target: '#site-sticker-links', up: '' down: '' },
+              menu: { target: 'auto', inactive: 'fade', active: 'no-fade' }
+            },
+          attribute:
+           {
+             components: 
+               {}
+            }
+          }">
+
+          <img class="sub-title" id="mozilla-omaha-logo" src="img/logos/Mozilla-Club-Omaha.png" alt="Mozilla Clubs Omaha">
+
+          <img id="table-of-contents-up-toggle" class="toggle up-arrow full-vertical" name="nav-carousel-ui"
+              src="img/ui/arrows/up-arrow-a1.png" alt="toggle navigation list up">
+          <img id="table-of-contents-down-toggle" class="toggle down-arrow full-vertical" name="nav-carousel-ui"
+              src="img/ui/arrows/down-arrow-a1.png" alt="toggle navigation list down">
+
+          <nav class="horizontal-span" id="site-sticker-links">
+            <a class="block" id="mozilla-omaha-blog-link"
+                href="https://mozillaomaha.wordpress.com/" 
+                alt="Mozilla Club Omaha Blog"
+                title="activate the link to proceed to the blog page" target="new">
+              <strong class="first-participation-sticker">Mozilla Club Omaha Blog</strong>
+            </a> 
+            <a class="block" id="mozilla-omaha-application-link"
+                href="applications-index.html"
+                alt="Mozilla Club Omaha Applications"
+                title="activate the link to proceed to the applications center">
+                  <strong class="first-participation-sticker">Mozilla Club Applications</strong>
+            </a>
+            <a class="block" id="mozilla-omaha-library-link" 
+                href="library.html"
+                alt="Mozilla Club Omaha Library"
+                title="activate the link to proceed to the library">
+              <strong class="first-participation-sticker">Mozilla Club Library</strong>
+            </a>
+            <a class="block" id="mozilla-omaha-forum-link"
+                href="forum.html"
+                alt="Mozilla Club Omaha Forum"
+                title="activate the link to proceed to the forum">
+              <strong class="first-participation-sticker">Mozilla Club Forum</strong>
+            </a>
+            <a class="block" id="mozilla-omaha-calender-link"
+                href="events.html"
+                alt="Mozilla Omaha Calender"
+                title="activate the link to proceed to the calender">
+              <strong class="first-participation-sticker">Mozilla Club Calender</strong>
+            </a><br>
+          </nav>
+
+          <x-display 
+            data-json="{
+              content: 
+                {
+                current: 'null',
+                device: { type: 'laptop' }
+                }
+              lifecycle:
+                {
+                  created: [ ]
+                }
+              }">
+          </x-display>
+
+        </x-aside>
+
+
+
+
+
+<!-- Notes: x-article module element -->
+        <x-article class="main" id="main">
+
+
+  <!-- Notes: header -->
+          <div class="header">
+            <section class="welcome-heading" id="information">
+              <h3 class="chapter-title">Welcome</h3>
+              <p class="text">
+  This is Mozilla Club Omaha's portal to our learning forums, but it's more than that, it's also a place to meet and talk about 
+  your hobbies, goals, and inspirations.
+              </p>
+            </section>
+          </div>
+
+          <div class="module" id="about-mozilla-club-omaha">
+            <section>
+              <h3 class="chaper-title">About Mozilla Omaha</h3>
+			        <p class="text">
+  Mozilla Club Omaha was started up by Kip (Steven Van Sant) in 2016 to teach web literacy. 
+              </p>
+            </section>
+
+            <section class="intro-section" id="mozOmahaManifesto">
+              <h4 class="sub-chapter-title">Mozilla Club Omaha Manifesto</h4>
+              <p class="text">
+  Mozilla Club Omaha is a small group within the larger network of Mozillians, but nonetheless we pledge to pursue the principles 
+  of the Mozilla Foundation. Through our decisions, activities, participation, and contributions we will lead, follow, and build a 
+  future for the internet that can be shared by all. We will safegaurd your rights and produce high quality open source resources 
+  so that you and others may enjoy, <b>"The web of things"!</b>
+              </p>
+            </section>
+          </div>
+
+<!-- Notes: Footer -->
+          <footer class="footer">
+            <p class="text">
+  Web page maintained by Mozilla Omaha Club
+            </p>
+            <p class="text">
+  Special thanks to:&nbsp;&nbsp;<a href="http://kipomaha.org" target="new">Kip from Omaha</a>
+            </p>
+            <div class="license">
+              <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">
+                <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png">
+              </a>
+            </div>
+          </footer>
+
+        </x-article>
+
+        <script type="text/javascript" src="js/node_modules/x-tag/dist/x-tag-core.js"></script>
+
+        <script type="text/javascript">
+
+var _styles = function( _element, p, x, y, z, w, h){
+
+	_element.style.position = p;
+	_element.style.top = y;
+	_element.style.left = x;
+	_element.style.zIndex = z;
+	_element.style.width = w;
+	_element.style.height = h;
+
+	return _element.getAttribute("style");
+
+};
+
+var _tocListener = function(){
+
+    if( this.hasAttribute("style") === false ){
+
+      _styles(this,'','','','1');
+
+      this.className += " " + "slide-section-left";
+
+      document.getElementById("TOC").className += " " + "fade-section-left";
+      document.getElementById("main").className += " " + "slide-widen-right";
+
+    }
+    else{
+
+      this.removeAttribute("style");
+      this.className = "web-toggle-button";
+
+      document.getElementById("TOC").className = "aside";
+      document.getElementById("main").className = "main";
+
+    }
+
+};
+
+        </script>
+
+      </body>
+    </html>
+

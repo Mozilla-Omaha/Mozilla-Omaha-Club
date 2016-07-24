@@ -3,375 +3,111 @@
 <!--
 ===========================================================
 	Company: Mozilla Omaha
-    Author: Steven Van Sant
-    Date: 4/21/2016
-
-===========================================================
--->
-
-<!--
-===========================================================
+  Author: Steven Van Sant
+  Date: 4/21/2016
 	Contributors: Steven Van Sant
-
 ===========================================================
 -->
 
 <!doctype html>
 	<html>
+
 	  <head>
-		<meta charset="utf-8">
+
+		    <meta charset="utf-8">
         <meta name="viewport" content="initial-scale=1">
-        <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/makerstrap/makerstrap.complete.min.css">
-        <link rel="stylesheet" href="https://mozilla.github.io/webmaker-curriculum//stylesheets/styles.css" media="screen">
-        <link rel="stylesheet" href="https://mozilla.github.io/webmaker-curriculum//stylesheets/print.css" media="print">
+
+        <link rel="stylesheet" href="css/styles.css" media="screen">
         <link rel="stylesheet" href="css/mozOmaha.css"/>
+
+        <script src="js/node_modules/aframe/dist/aframe-v0.2.0.js" async></script>
+
         <title>Mozilla Omaha</title>
+
       </head>
 
 	  <body>
-
-
-<!-- Notes: To add another item to the table of contents copy and paste the snippet below 
-
-
-<li>  
-  <a href="#[chapterId]" class="web-link-table-of-contents">
-    <button style="[Styles that you want to override]" class="btn literacy-color-coding-browsers">[Your Moz Web lit subject]</button>
-  </a>
-  <div class="hover-toggle">
-    <p class="text-table-of-contents">[Simple description of our content]</p>
-    <a href="#[your-bookmark-id]">Bookmark Title</a><br>
-  </div>
-
-</li>
-
-*** Template End *** -->
         
-        <aside class="aside" id="TOC">
-          <h2 class="table-contents chapter-title">Navigation</h2>
-          <h4 class="table-contents sub-chapter-title">Page Links</h4>
+        <x-aside class="aside" id="TOC">
+
+          <img class="company-name" src="img/logos/Mozilla-Club-Omaha.png" alt="Mozilla Clubs Omaha">
+
+          <nav class="nav">
+            <h4 class="title">Mozilla Omaha Links</h4>
+            <a class="block" href="https://mozillaomaha.wordpress.com/">Moz Omaha Blog</a> |
+            <a class="block" href="downloads.html">Applications</a> |
+            <a class="block" href="library.html">Library</a> |
+            <a class="block" href="forum.html">Forum</a> |
+            <a class="block" href="events.html">Events</a><br>
+          </nav>
+
           <ol class="table-of-contents">
-			<li>
-			  <a href="#information" class="web-link-table-of-contents">
+            <li>
+              <a href="#information" class="web-link-table-of-contents">
                 <button id="lesson-page-use" class="btn literacy-page-use">Welcome</button>
               </a>
+
               <div class="hover-toggle-expanded" id="whatDivBtn">
                 <p class="text-table-of-contents">
   Descirbes what the page is for.
                 </p>
                 <a href="#services">Services</a><br>
               </div>
-			</li>
-			<li>
-			  <a href="#aboutMozOmaha" class="web-link-table-of-contents">
+            </li>
+
+            <li>
+              <a href="#aboutMozOmaha" class="web-link-table-of-contents">
                 <button id="firefox-intro" class="btn literacy-introduction">About Mozilla Omaha</button>
               </a> 
+
               <div class="hover-toggle-expanded" id="introDivBtn">
                 <p class="text-table-of-contents">
   About us.
                 </p>
                 <a href="#mozOmahaManifesto">Mozilla Omaha's Manifesto</a><br>
-                <a href="#Kip_Mozilla">Kip Omaha chooses Mozilla</a><br>
-                <a href="#mozOmaha2016">Mozilla Omaha 2016</a><br>
-				<a href="#mozOmahaFuture">Mozilla Omaha's Future</a><br>
-              </div>
-			</li>
-            <li>
-              <a href="#chapter1" class="web-link-table-of-contents">
-                <button id="firefox-browser" class="btn literacy-browsers">Lesson Plans</button>
-              </a>
-              <div class="hover-toggle-expanded" id="firefoxDivBtn">
-                <p class="text-table-of-contents">
-  Browse our lesson plans to learn more about the web.
-                </p>
-				<a href="#chapter1">Learning Firefox</a><br>
+                <a href="#mozOmaha2016">Mozilla Club Omaha 2016</a><br>
+                <a href="#mozOmahaFuture">Mozilla Club Omaha's Future</a><br>
               </div>
             </li>
-<h4 class="table-contents sub-chapter-title" id="btn-banner"><a href="https://www.mozilla.org" targe="new">Mozilla.org</a></h4>
           </ol>
-          
-        </aside>
+        </x-aside>
 
-
-<!-- Notes: Toggle button to collapse the TOC -->
         <button id="web-toggle-button" class="web-toggle-button"></button>
 
-
-        <!-- Remix Notes: Main Content contains your learning events and information -->
-
-
         <article class="main" id="main">
+
+<!-- Notes: header -->
           <div class="header">
-            <section class="logo-section">
-			  <h1>Services hosted by,</h1>
-              <a class="img-link" href="#">
-                <img alt="Mozilla Omaha" src="img/logos/Mozilla-Omaha-Club.png">
-              </a>
+
+            <section class="welcome-heading" id="information">
+              <h3 class="chapter-title">Welcome</h3>
+              <p class="text">
+  This is Mozilla Club Omaha's portal to our learning forums, but it's more than that, it's also a place to meet and talk about 
+  your hobbies, goals, and inspirations.
+              </p>
             </section>
-            
-            
-            <!-- Notes: Log On and downloads -->
-
-
-<!--			<section class="account-section" id="logon-createAccount">
-				<h4 class="sub-chapter-title">Log On/Create Account</h4>
-				<p class="text">
-  If you want to be a Mozilla Omaha Club Member and enjoy the fellowship of our community please sign up by clicking create account. By clicking the
-  create account link you will be redirected to our sign up page, where you can find more information regarding membership.
-				</p>
-				<form>
-					<input type="text">
-					<input type="password">
-					<input type="Submit" class="execute"><br>
-					For account creation or help visit our
-					<a href="formcabinet.html" target="new">form cabinet</a>
-				</form>
-            </section>
--->
-            
-            <section class="quickNav">
-				<h4 class="navTitle" style="font-family: none; text-decoration: none;">Mozilla Omaha Links</h4>
-				<a class="header-link" href="https://mozillaomaha.wordpress.com/">Moz Omaha Blog</a> |
-				<a class="header-link" href="downloads.html">Applications</a> |
-				<a class="header-link" href="library.html">Library</a> |
-				<a class="header-link" href="forum.html">Forum</a> |
-				<a href="events.html">Events</a><br>
-			</section>
-
-			<section class="welcome-heading" id="information">
-				<h3 class="chapter-title">Welcome</h3>
-				<p class="text">
-  This is Mozilla Omaha's portal to our learning forums, but it's more than that, it's also a place to meet and talk about your hobbies, goals, and 
-  inspirations.
-				</p>
-				<p class="text">
-  At Mozilla Omaha we hold Maker Parties at libraries, provide offline web apps, get involved with collaborative science and engineering, and much more. 
-				</p>
-			</section>
-
-			<section class="services-section" id="services">
-				<h4 class="sub-chapter-title">Services</h4>
-				<p class="text">
-  Mozilla Omaha provides the following services free of charge:
-				</p>
-				<ol>
-                  <li>monthly events,</li>
-				  <li>an online library,</li>
-				  <li>and an online forum,</li>
-				  <li>and much more.</li>
-				</ol>
-                <h4 class="event-title featured">Firefox Hacks Omaha</h4>
-                <p class="description">
-  The "Learning Firefox: Beginners" module teaches you alot so be prepared to learn the web! Below is a screenshot of the Firefox browser.
-                </p>
-                <img src="img/firefox-dreamweaver-view.png">
-                <p class="caption">
-  Firefox hacks screen shot. Turn Firefox into a development environment.
-                </p>
-				<p class="text">
-  All services are provided free of charge and ran by volunteers. If your interested in becoming a Mozilla Omaha Volunteer contact Mozilla Omaha via our 
-<a href="#">Facebook page</a>.
-                </p>
-			</section>
           </div><hr>
 
-
-<!-- Notes:  About Mozilla Omaha -->
-
-
-          <div class="web-welcome" id="aboutMozOmaha">
-			<section>
+          <div class="module" id="about-mozilla-club-omaha">
+            <section>
               <h3 class="chaper-title">About Mozilla Omaha</h3>
-			  <p class="text">
-  Mozilla Omaha was started up by Kip Omaha in 2016 to teach web literacy through collaboration. Mozilla Omaha's goals are the same as the 
-<a href="#">Mozilla Foundations</a>, but we direct our efforts to accomplish specific tasks that help Mozilla's bigger picture out.
-Read on to find out how Mozilla Omaha helps!  
+			        <p class="text">
+  Mozilla Club Omaha was started up by Kip (Steven Van Sant) in 2016 to teach web literacy. 
               </p>
-			</section>
-			<section class="intro-section" id="mozOmahaManifesto">
-			  <h4 class="sub-chapter-title">Mozilla Omaha Manifesto</h4>
-			  <p class="text">
-  Mozilla Omaha is a small group within the larger network of Mozillians, but nonetheless we pledge to pursue the principles of the Mozilla Foundation. 
-Through our decisions, activities, participation, and contributions we will lead, follow, and build a future for the internet that can be shared by all.
-We will safegaurd your rights and produce high quality open source resources so that you and others may enjoy, <b>"The web of things"!</b>
-              </p>
-			</section>
-			<section class="intro-section" id="Kip_Mozilla">
-			  <h4 class="sub-chapter-title">Kip Omaha chooses Mozilla</h4>
-			  <p class="text">
-  Kip Omaha is a small company that promotes open science and engineering, so for us taking the dive into creating a Mozilla Club of our own in our local 
-area was a quick and simple decision to make. By taking this action we hope to create a community of people in our area that understands how the
-web can be leveraged as a tool to connect not only on social terms but as a means for entrepunuership, sience, and engineering collaboration.
-			  </p>
-			</section> 
-			<section class="intro-section" id="mozOmaha2016"> 
-			  <h4 class="sub-chapter-title">Mozilla Omaha 2016</h4>
-			  <p class="text">
-  Mozilla Omaha has many plans for 2016, but the center piece that they all revolve around is the pursuit to create an online forum for open science and 
-engineering. Our goal is to get people involved in the science and engineering that makes an impact on their everyday lives by teaching people how to 
-become participants and collaborators using the web.
-			  </p>
-			</section> 
-			<section class="intro-section" id="mozOmahaFuture">
-			  <h4 class="sub-chapter-title">Mozilla Omaha's Future</h4>
-			  <p class="text">
-  Mozilla Omaha's future is set by the club members in our local community so that our future goals may change. In 2016 we are taking on the challenge
-of open science and engineering on the web, but as we progress and increase our membership our goals may change and multiply.
-			  </p>
-            </section> 
-          </div><hr>
+            </section>
 
-
-<!-- Notes: Lesson Plans -->
-
-
-          <div class="chapter" id="chapter1">
-			<section>
-              <h3 class="chapter-title">Lesson Plans</h3>
+            <section class="intro-section" id="mozOmahaManifesto">
+              <h4 class="sub-chapter-title">Mozilla Club Omaha Manifesto</h4>
               <p class="text">
-  Welcome to our lesson plan resources. We are glad you found us and hope you'll help make this the best resource for learning that it can possibly be. 
+  Mozilla Club Omaha is a small group within the larger network of Mozillians, but nonetheless we pledge to pursue the principles 
+  of the Mozilla Foundation. Through our decisions, activities, participation, and contributions we will lead, follow, and build a 
+  future for the internet that can be shared by all. We will safegaurd your rights and produce high quality open source resources 
+  so that you and others may enjoy, <b>"The web of things"!</b>
               </p>
-              <p class="text">
-  To see a list of all our lesson plans visit our <a href="library.html">library</a>. If your looking for faqs about a module or about 
-contributing you'll find information about making contributions and other topics at the module's lesson plan page that is downloaded with the
-lesson plan packet. 
-              </p>
-			</section>
-
-			<section id="firefox">
-			  <h4 class="sub-chapter-title">Learning Firefox</h4>
-			  <p class="text">
-  The "Learning Firefox" lesson plan has three different skill levels: beginner, intermediate, and advanced. Each level is supposed to challenge the 
-learner to gain knowledge that sets the person in a direction that is suitable for his or her own goals. The thought behind this method is to teach them
-that Firefox is a multifaceted tool that can be used in creative ways to accomplish their personal goals.
-              </p>
-              <ol class="lesson-plan" id="firefox">
-		<!-- Notes: Start of HTML lesson plans -->
-			<!-- Notes: HTML lesson Beginner -->
-                <li class="chapter-resource-beginner"><b style="position:relative;display:inline-block;height:5mm;width:50%;background:green;"></b>
-                  <div class="chapter-resource-content">
-                    <div class="time">
-                      <p>TBD.<br><br><br>Occurs: Weekly</p>
-                    </div>
-                    <div class="time">
-                      <p>8:30 P.M.<br><br>Lasts: 60 min.</p>
-                    </div>
-                    <h3>Beginner: Learning Firefox</h3>
-                    <p class="text-light">
-  We take you through the basics of Firefox, by the end of the class you'll have your own reference sheet to help you use Firefox.
- 				    </p>
-				    <h4 class="chapter-resource-title">Resources: </h4>
-                    <p class="text-light">
-  Please download each of the resources so that you can complete each activity.
-                    </p>
-                    <p class="text-light">
-  <strong>*</strong> Please see the L.P. instructions if your not familiar with downloading zip files.
-					</p>
-                    <ul>
-                      <li>
-					    <a href="../apps/javascript_Snippet_IDE/javascript_snippet_lite_ide.zip">Snippet Organizer</a><strong>*</strong> 
-					  </li>
-                      <li>
-					    <a href="teachTheWeb/firefox/beginner/LP.html">Lesson Plan Packet</a> 
-					  </li>
-                    </ul>
-				    <h4 class="chapter-resource-title">Objectives: </h4>
-				    <p class="text">
-  By the end of the class you should have a clear understanding of the Firefox browser and its role in your professional and social life. You will
-complete activities to help increase your knowledge so that you can apply what you learn to helping you accomplish your goals. You should be able to
-do the following by the completion of the beginners Firefox module.
-				    </p>
-                    <ol>
-                      <li>Install Firefox</li>
-                      <li>Tell others about the features of Firefox</li>
-                      <li>Be able to customize Firefox</li>
-                      <li>Be able to download and run an HTML Application</li>
-                    </ol>
-				    <h4 class="chapter-resource-title">L.P. Instructions: </h4>
-				    <p class="text">
-  Downlaod the resources that are necassary to complete this pacakge. Once you have the zip files downloaded follow the instruction to unpack the 
-contents of the firefox-beginner-lesson-plan.zip file.  
-				    </p>
-					<ol>
-					  <strong class="chapter-resource-title">L.P. zip file instructions</strong>
-					  <li>
-                        <p class="inline">
-  Right click the firefox-beginner-lesson-plan-template zip file that you downloaded earlier by clicking the lesson plan packet link.
-  You should click the "Lesson Plan Packet" link if you haven't already done so.
-						</p><br>
-                        <img src="img/lesson-plan-zip-instruction-1.png" alt="Lesson Plan Link Image"><br>
-                        <p class="text">
-  Check the open or save file input, than continue on to the next step.
-                        </p>
-  					  </li>
-					  <li><p class="inline">
-  Once you have found the downloaded zip file, right click it and look for the option to extract all and click it. If you have a prefered extraction 
-tool that you use feel free to use it just remember the location where you unpacked it to. I will choose to download the zip file to my downloads folder, than 
-extract the files to a folder named "Beginners Firefox Lesson Plan" that's on my desktop.
-                        </p><br>
-						<img src="img/lesson-plan-zip-instruction-2.png"><br><br>
-                      </li>
-					  <li><p class="inline">
-  A dialog window should appear with your options if you choose to use extract all. Click the browse button and navigate to the folder you want to
-extract to.
-                        </p><br>
-						<img src="img/lesson-plan-zip-instruction-3.png"><br>
-						<p class="text">
-  
-                        </p>
-                      </li>
-					  <li><p class="inline">
-  After you have confirmed your download open the folder containing the contents from the zip file and right click the LP.html file 
-and choose to open it With the Firefox browser. Alternatively you can just drag the icon over the Firefox icon and release it and it will open up
-too. If all goes well you should be able to see the actual detailed lesson plan, and you can start using the Beginner's Learning Firefox module.
-                        </p><br>
-						<img src="img/lesson-plan-zip-instruction-4.png"><br>
-                      </li>
-					</ol>
-					<cite>
-  Compiled from the resources of the Mozilla Learning Network and the Mozilla Developer Network.
-                    </cite>
-                    <cite>
-  Lesson plan written by Steven Van Sant.
-                    </cite>
-                  </div>
-                </li>
-
-			<!-- Notes: HTML lesson intermediate -->
-                <li class="chapter-resource-beginner"><b style="position:relative;display:inline-block;height:5mm;width:50%;background:yellow;"></b>
-                  <div class="chapter-resource-content">
-                    <div class="time">
-                      <p>TBA<br><br></p>
-                    </div>
-                    <h3>Intermediate: Learning Firefox</h3>
-                    <p class="text-light">
-  This module is still being developed. If you'd like to make a contribution, please sign up for a <a href="#">Mozilla Webmaker Account</a> 
-or email kipOmaha@gmail.com.
- 				    </p>  
-                  </div>
-                </li>
-
-			<!-- Notes: HTML lesson advanced -->
-                <li class="chapter-resource-beginner"><b style="position:relative;display:inline-block;height:5mm;width:50%;background:red;"></b>
-                  <div class="chapter-resource-content">
-                    <div class="time">
-                      <p>TBA<br><br></p>
-                    </div>
-                    <h3>Advanced: Learning Firefox</h3>
-                    <p class="text-light">
-  This module is still being developed. If you'd like to make a contribution, please sign up for a <a href="#">Mozilla Webmaker Account</a> 
-or email kipOmaha@gmail.com.
- 				    </p>  
-                  </div>
-                </li>
-              </ol>
             </section>
           </div><hr>
-
 
 <!-- Notes: Footer -->
-
-
           <footer class="footer">
             <p class="text">
   Web page maintained by Mozilla Omaha Club
@@ -381,17 +117,19 @@ or email kipOmaha@gmail.com.
             </p>
             <div class="license">
               <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">
-				<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png">
-			  </a>
+                <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png">
+              </a>
             </div>
           </footer>
+
         </article>
+
+        <script type="text/javascript" src="js/node_modules/x-tag/dist/x-tag-core.js"></script>
 
         <script type="text/javascript">
 
-// Notes: Manipulates inline css
-
 var _styles = function( _element, p, x, y, z, w, h){
+
 	_element.style.position = p;
 	_element.style.top = y;
 	_element.style.left = x;
@@ -400,28 +138,28 @@ var _styles = function( _element, p, x, y, z, w, h){
 	_element.style.height = h;
 
 	return _element.getAttribute("style");
-};
 
-// Notes: Event Listener for TOC Toggle button
+};
 
 var _tocListener = document.getElementById("web-toggle-button").addEventListener("click", function(){
 
-// Check for style attribute. If false apply styles or else remove styles.
-
-    if(this.hasAttribute("style") === false){
+    if( this.hasAttribute("style") === false ){
       _styles(this,'','','','1');
-	  this.className += " " + "slide-section-left";
-	  document.getElementById("TOC").className += " " + "fade-section-left";
+      this.className += " " + "slide-section-left";
+      document.getElementById("TOC").className += " " + "fade-section-left";
       document.getElementById("main").className += " " + "slide-widen-right";
     }
     else{
       this.removeAttribute("style");
-	  this.className = "web-toggle-button";
-	  document.getElementById("TOC").className = "aside";
-	  document.getElementById("main").className = "main";
+      this.className = "web-toggle-button";
+      document.getElementById("TOC").className = "aside";
+      document.getElementById("main").className = "main";
     }
-          });
+
+} );
+
         </script>
+
       </body>
     </html>
 

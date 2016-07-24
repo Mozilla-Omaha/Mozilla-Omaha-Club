@@ -1,0 +1,155 @@
+
+@keyframes widen-right{
+	0%{
+		height: 0mm;
+		width: 0mm;
+	}
+	100%{
+		height: 100%;
+		width: 25%;
+	}
+}
+
+@keyframes slide-open-right{
+	0% {
+		left: 0mm;
+	}
+	100%{
+		left: 25%;
+	}
+}
+
+@keyframes toggle-hover-animation{
+	0% {
+		height: 0mm; 
+		color: rgba(0,0,0,0); 
+		background-color: rgba(255,255,255,0);
+	}
+	100% {
+		height: 35mm; 
+		color: rgba(0,0,0,1); 
+		background-color: rgba(255,255,255,1); 
+		border-radius: 15mm 0mm 0mm 15mm; 
+		width:85%; 
+	}
+}
+
+@keyframes click-fade-animation{
+	0% {
+	}
+	100% {
+		height: 0%;
+		width: 0%;
+		visibility: hidden; 
+		background-color:transparent; 
+		color: rgba(0,0,0,0);
+		overflow: hidden;
+	}
+}
+
+@keyframes click-slide-left-animation{
+	0% {
+		left: 30%;
+	}
+	100% {
+		left:0mm;
+	}
+}
+
+@keyframes slide-narrow-right{
+	0%{
+		left: 0mm;
+		width: 100%
+	}
+	100%{
+		left: 26%;
+		width: 80%;
+	}
+}
+
+@keyframes click-widen-animation{
+	0%{
+	}
+	100% {
+		margin-left:0mm;
+		left:0mm;
+		width:103%;
+	}
+}
+
+/* styles for the x-aside element and its children */
+#site-navigation{
+	width: 100%;
+	overflow: hidden;
+}
+#mozilla-omaha-logo{
+	position: absolute;
+	left: 20px; top: 2px;
+}
+#table-of-contents-up-toggle{
+	position: absolute;
+	left: 250px; top: 0px; 
+	width: 30px; height: 30px;
+}
+#table-of-contents-down-toggle{
+	position: absolute;
+	left: 250px; top: 31px; 
+	width: 30px; height: 30px;
+}
+#site-sticker-links{
+	position: absolute;
+	top: 5px; left: 315px;
+    background-color: rgb(200,200,255);
+}
+#site-sticker-links a{
+	position: relative;
+    width: 15mm; height: 15mm;
+    margin: 1.75mm; padding: 0mm 1mm 0mm 1mm;
+    background-color: rgb(255,255,255);
+    border: rgb(0,0,0) 1px solid;
+    font-size: .1em;
+}
+#mozilla-omaha-blog-link{
+	background-image: url("../img/stickers/mozilla-club-omaha-library-participation-sticker.png");
+	background-repeat: no-repeat; background-position: center; background-size: cover;
+}
+#mozilla-omaha-library-link{
+	background-image: none;
+}
+
+
+
+
+	/* animation keyframes and event styles for the x-aside element and its children */
+@keyframes toggle-up{
+    0%{}
+    100%{
+    	top: -2px;
+    }
+}
+#table-of-contents-up-toggle:hover{
+	animation-name: toggle-up;
+	animation-duration: .3s;
+	animation-fill-mode: forwards;
+}
+@keyframes toggle-down{
+    0%{}
+    100%{
+    	top: 33px;
+    }
+}
+#table-of-contents-down-toggle:hover{
+	animation-name: toggle-down;
+	animation-duration: .3s;
+	animation-fill-mode: forwards;
+}
+
+
+
+
+/* styles for the x-article element and its children */
+#main{
+	position: absolute;
+	top: 25mm;
+	width: 100%;
+}

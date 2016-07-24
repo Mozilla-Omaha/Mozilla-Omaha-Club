@@ -27,7 +27,7 @@
             preload: [ ' ' ],
             onstart: [ ' ' ],
             onexit: [ ' ' ],
-            checkCurrentStatus: [ ' ' ]
+            statusChange: [ ' ' ]
             },
         events:
             {
@@ -63,30 +63,38 @@
 	<link rel="stylesheet" href="css/mozOmaha-library.css" />
 
 	<script type="text/javascript" src="js/node_modules/aframe/dist/aframe-v0.2.0.js"></script>
-    <script type="text/javascript" src="js/node_modules/x-tag/dist/x-tag-core.js"></script>
 
 </head>
 
 <body id="body">
 
-<!--Notes: Library HTML Application x-tag Display x-header. -->
+<!-- Notes: Library HTML Application x-tag Display x-header. -->
 	<x-header id="header" class="header-library" data-json="
         {
-        id: 'header',,
-        current: 'default',
+        id: 'header',
         meta:
             {
             title: 'Mozilla Omaha Library',
             root: 'www.mozillaomaha.org',
             type: 'html/json'
-            }
+            },
         content: 'scene( #aframeLogo )',
         lifecycle: 
             {
-            preload: [ ' ' ],
-            onstart: [ ' ' ],
-            onexit: [ ' ' ],
-            checkCurrentStatus: [ ' ' ]
+            created: 
+                { 
+                type: 'preload/animation', 
+                duration: '10s', 
+                keymap: 'banner-reveal' 
+                },
+            inserted: 
+                {
+                status: true,
+                visibility: visible,
+                dimensions: [ ]
+                },
+            removed: [ ' ' ],
+            attributeChanged: [ ' ' ]
             },
         events:
             {
@@ -199,7 +207,7 @@
                 type: 'application'
                 }
         }">
- 
+ `
 	<!-- Notes: Library HTML Application x-tag form x-book -->	  
 			<x-book class="chapter" data-json="
                 {
@@ -228,6 +236,7 @@
 
 	<!-- Notes: Library HTML Application x-tag form x-entity -->
             <x-kiosk data-json="">
+
                 <h3 class="title">Library Menu</h3>
                 <button id="openReader" onclick="reader._open('reader-container','reader-viewer','reader-controls');this.getElementsByTagName('h4')[0].innerHTML==='Open Reader'?this.getElementsByTagName('h4')[0].innerHTML='Close Reader':this.getElementsByTagName('h4')[0].innerHTML='Open Reader';"><h4 class="title">Open Reader</h4></button>
                 <button><h4 class="title">Donate Library eBook</h4></button><br />
@@ -302,10 +311,9 @@
 		</x-memory>
 
 	</x-application>
-<script type="text/javascript">
-
-</script>
 
 </body>
+
+<script type="text/javascript" src="js/node_modules/x-tag/dist/x-tag-core.js" async></script>
 
 </html>

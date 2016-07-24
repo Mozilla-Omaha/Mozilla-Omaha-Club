@@ -1,3 +1,4 @@
+/* Styles: HTML tag element styles */
 body {
 	font-family: "Open Sans", sans-serif; 
 	letter-spacing: .05em;
@@ -14,7 +15,6 @@ ol{
 	border-color: rgba(170,170,170,1);
 	background: rgba(245,245,245,1);
 	vertical-align: middle;
-}
 }
 section{
 	margin: 3mm;
@@ -52,24 +52,32 @@ input:hover,textarea:hover,button:hover{
 	border-style: inset;
 	background: rgba(245,245,245,.3125);
 }
-memory{
-	position:absolute;
-	top:0px;
-	left:0px;
-	width: 0px;
-	height: 0px;
-	overflow: hidden;
-	visibility:hidden;
+
+
+
+
+/* Styles: animation keyframes */
+@keyframes change-height-20{
+	0%{
+    height: 0mm;
+	}
+	100%{
+    height: 20mm;
+	}
 }
-block{
-	position:absolute;
-	top:0px;
-	left:0px;
-	width: 0px;
-	height: 0px;
-	overflow: hidden;
-	visibility:hidden;
+@keyframes change-height-25{
+	0%{
+    height: 0mm;
+	}
+	100%{
+    height: 25mm;
+	}
 }
+
+
+
+
+/* Styles: x-tag element styles */
 x-memory{
 	position:absolute;
 	top:0px;
@@ -79,42 +87,51 @@ x-memory{
 	overflow: hidden;
 	visibility:hidden;
 }
+
+/* Styles: class styles */
 .title{
 	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-weight: bold;
+	font-weight: normal;
 	letter-spacing: .1em;
 	vertical-align: middle;
 	color:rgba(65,65,65,1);
 }
-.label{
-	font-size: 19px;
-	color: rgba(85,85,85,1);
+.sub-title{
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	letter-spacing: .1em;
+	vertical-align: middle;
+	color:rgba(95,95,95,1);
 }
 .chapter{
-	margin: 3mm;
-	padding: 1mm;
-	padding-left: 5mm;
+	margin: 2.5mm;
 }
 .sub-chapter{
-	margin: 5mm;
-	margin: 5mm;
-	padding: 1mm;
-	padding-left: 5mm;
+	margin: 3.75mm;
 }
-.event{
-	margin: 5mm;
-	font-size: 16px;
-	color: rgba(75,75,75,1);
+.drop-curtain{
+	position:fixed;
+	animation-name: change-height-20;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
 }
-.sticker{
-	background-color: rgba(255,255,255,1);
+.main{
+    font-family: sans-serif;
+    font-size: 1em;
+    color: rgb(100,100,100);
 }
 .rounded{
-	border-radius: 1.75mm;
+	border-radius: 2mm;
 }
 .inline{
 	display: inline-block;
 	vertical-align: middle;
+}
+.block{
+	display: block;
+}
+.bold{
+	font-weight:bold;
 }
 .centered{
 	text-align: center;
@@ -124,30 +141,20 @@ x-memory{
 	text-align: right;
 	vertical-align: middle;
 }
-.text-cell{
+.cell{
 	padding: 1mm;
-	width: 30%; 
-	height: auto;
-	background:rgba(255,255,0,.65);
-}
-.margin-left{
-	margin-left: 1mm;
-}
-.block{
-	display: block;
+	border: rgba(35,35,35,1) 1px solid;
+	background: rgba(255,255,0,.65);
 }
 .description{
 	font-family: segoe;
 	font-size: 16px;
-	display: inline-block;
+	display: block;
 }
 .caption{
 	font-family: segoe;
 	font-size: 16px;
 	display: inline-block;
-}
-.logo{
-	background-color:none;
 }
 .memory{
 	position:absolute;
@@ -155,9 +162,6 @@ x-memory{
 	left:0px;
 	width: 0px;
 	height: 0px;
-	overflow: none;
+	overflow: hidden;
 	visibility:hidden;
-}
-.footer{
-	height: 50mm;
 }
