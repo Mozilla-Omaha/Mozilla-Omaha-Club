@@ -27,7 +27,7 @@
       </head>
 
 	  <body>
-        
+
         <x-aside class="drop-curtain" id='site-navigation' name="top-menu"
           data-json="{
           id: '#',
@@ -40,25 +40,35 @@
             },
           content: 
             {
-              current: '',
+              current: 'auto',
               device: { type: 'laptop' }
             },
           lifecycle:
             {
-              created: [ 'preload', { type: 'webvr', target: '' } ],
+              created: [ 'preload', { type: 'webvr', target: 'auto' } ],
               inserted: [ 'onstart', 'playSet(1)' ],
               removed: [ 'message', 'prompt( Are you sure you want to close the Web VR player? )' ],
               propertyChanged: [ 'content', 'display()' ]
             },
           events:
             {
-              carousel : { target: '#site-sticker-links', up: '' down: '' },
-              menu: { target: 'auto', inactive: 'fade', active: 'no-fade' }
+              carousel: 
+                { 
+                  target: '#site-sticker-links', 
+                  up: 'auto', 
+                  down: 'auto' 
+                },
+              menu: 
+                { 
+                  target: 'auto', 
+                  inactive: 'fade', 
+                  active: 'auto' 
+                }
             },
           attribute:
-           {
+            {
              components: 
-               {}
+               { validate: 'auto' }
             }
           }">
 
